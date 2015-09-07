@@ -1,0 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Exo);
+@import url(https://fonts.googleapis.com/css?family=Dosis);
+/*Mixin*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Dosis',sans-serif; }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,23 @@
+{
+  "name": "ugymweb",
+  "version": "1.0.0",
+  "description": "Universal Gym Website",
+  "main": "uweb.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dineshkumarreddyr/UGYMWEB.git"
+  },
+  "keywords": [
+    "Universal",
+    "Gym"
+  ],
+  "author": "Dinesh Kumar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dineshkumarreddyr/UGYMWEB/issues"
+  },
+  "homepage": "https://github.com/dineshkumarreddyr/UGYMWEB#readme"
+}

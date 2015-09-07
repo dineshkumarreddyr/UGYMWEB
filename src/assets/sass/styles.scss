@@ -1,0 +1,25 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Exo);
+@import url(https://fonts.googleapis.com/css?family=Dosis);
+
+$srcpath:"../images/";
+
+/*Mixin*/
+@mixin header {
+    font-family: 'Exo',sans-serif;
+}
+
+@mixin body {
+    font-family: 'Dosis',sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    @include body;
+}
+
+#homescreen {
+    .content {
+        
+    }
+}

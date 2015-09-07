@@ -1,0 +1,21 @@
+{
+  "name": "ugymweb",
+  "version": "1.0.0",
+  "homepage": "https://github.com/dineshkumarreddyr/UGYMWEB",
+  "authors": [
+    "dineshkumarreddyr <dinesh.rachumalla@hotmail.com>"
+  ],
+  "description": "Universal Gym Website",
+  "main": "uweb.js",
+  "keywords": [
+    "Universal"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
