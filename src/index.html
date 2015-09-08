@@ -10,62 +10,119 @@
     <link rel="stylesheet" href="../bower_components/components-font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="assets/scripts/owl-carousel/owl.carousel.css" />
     <link rel="stylesheet" href="assets/scripts/owl-carousel/owl.theme.css" />
-    <link rel="stylesheet" href="assets/scripts/owl-carousel/animate.css" />
+    <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/sass/styles.css" />
 </head>
 <body>
 
-    <!--<section>
+    <header class="uheader">
+        <nav class="navbar navbar-ugym">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand ugymlogo" href="#">
+                        <img src="assets/images/logogym.png" alt="Universal Gym" class="img-responsive" />
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="./">Whatwedo<span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">Ourschedule</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Findus</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+        </nav>
+    </header>
+
+    <section>
         <div class="row">
-            <div class="homescreen owl-carousel">
-                <div class="col-md-12">
-                    <img src="assets/images/homebg1.jpg" alt="Home Screen background 1" />
+            <div class="col-md-7 col-xs-12 ugym-left-box">
+                <h1 class="textaction">Its time to go, <strong>GYM</strong></h1>
+                <h2><q>A bear, however hard he tries, grows tubby without exercise.</q></h2>
+                <h4 class="pull-right">- A.A. Milne</h4>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="homescreen" class="owl-carousel">
+            <div class="content bg1"></div>
+            <div class="content bg2"></div>
+            <div class="content bg3"></div>
+        </div>
+    </section>
+
+    <section>
+        <div class="row promotions">
+            <div class="container">
+                <div class="col-md-6 text-right promotext">
+                    For new students, demo sessions are provided <strong>Free</strong>. Call us @
                 </div>
-                <div class="col-md-12">
-                    <img src="assets/images/homebg2.jpg" alt="Home screen background 2" />
+                <div class="col-md-6 text-center promotext promocontact">
+                    <i class="fa fa-mobile"></i> &nbsp;&nbsp;&nbsp;+91-9849722768
                 </div>
-                <div class="col-md-12">
-                    <img src="assets/images/homebg3.jpg" alt="Home screen backgound 3" />
+            </div>
+        </div>
+    </section>
+
+    <!-- What we do section -->
+    <!--<section>
+        <div class="row whatwedo">
+            <div class="container">
+                <div class="col-md-5">
+                    <img src="assets/images/wedomale.jpg" alt="Male" class="img-responsive" />
+                </div>
+                <div class="col-md-1">
+                    &nbsp;
+                </div>
+                <div class="col-md-5">
+                    <img src="assets/images/wedofemale.jpg" alt="Female" class="img-responsive" />
                 </div>
             </div>
         </div>
     </section>-->
-
-    <div id="homescreen" class="owl-carousel">
-        <div class="content">
-            <img src="assets/images/homebg1.jpg" class="img-responsive" alt="Home Screen background 1" />
-        </div>
-        <div  class="content">
-            <img src="assets/images/homebg2.jpg" class="img-responsive" alt="Home Screen background 2" /> 
-        </div>
-        <div  class="content">
-            <img src="assets/images/homebg3.jpg" class="img-responsive" alt="Home Screen background 3" /> 
-        </div>
-    </div>
-
-
     <!--Script library references-->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="assets/scripts/owl-carousel/owl.carousel.min.js"></script>
-
+    <script src="../bower_components/letteringjs/jquery.lettering.js"></script>
+    <script src="../bower_components/textillate/jquery.textillate.js"></script>
     <script>
         $('#homescreen').owlCarousel({
             items: 1,
             animateOut: 'slideOutDown',
             animateIn: 'flipInX',
             slideSpeed: 800,
-            autoPlay: 6000,
+            autoPlay: 5000,
             itemsDesktop: [1199, 4],
             itemsDesktopSmall: [980, 3],
             itemsTablet: [768, 2],
-            stopOnHover: true,
+            stopOnHover: false,
             responsive: true,
             responsiveRefreshRate: 200,
             responsiveBaseWidth: window,
             pagination: false,
             autoHeight: false
+        });
+
+        $('.textaction').textillate({
+            autoStart: true,
+            inEffects: [],
+            in: {
+                effect: 'fadeInDownBig',
+                delayScale: 1.5,
+                delay: 100,
+                sequence: true
+            },
+            type: 'word'
         });
     </script>
 </body>
