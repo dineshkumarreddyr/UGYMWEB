@@ -3,57 +3,12 @@
 
 $srcpath: "../images/";
 
-// SASS style sheet */
-// Palette color codes */
-// Palette URL: http://paletton.com/#uid=54a0y0krosngU-QlQu6txmDyAhK */
-
-// Feel free to copy&paste color codes to your application */
-
-
-// As hex codes */
-
-$color-primary-0: #3C279C; // Main Primary color */
-$color-primary-1: #7565BC;
-$color-primary-2: #5543A6;
-$color-primary-3: #2A187D;
-$color-primary-4: #1B0B62;
-
-$color-secondary-1-0: #205394; // Main Secondary color (1) */
-$color-secondary-1-1: #5D84B5;
-$color-secondary-1-2: #3B669D;
-$color-secondary-1-3: #123E76;
-$color-secondary-1-4: #072D5D;
-
-$color-secondary-2-0: #6D1C97; // Main Secondary color (2) */
-$color-secondary-2-1: #985BB7;
-$color-secondary-2-2: #7D38A0;
-$color-secondary-2-3: #550F78;
-$color-secondary-2-4: #40045E;
-
-
-
-// As RGBa codes */
-
-$rgba-primary-0: rgba( 60, 39,156,1); // Main Primary color */
-$rgba-primary-1: rgba(117,101,188,1);
-$rgba-primary-2: rgba( 85, 67,166,1);
-$rgba-primary-3: rgba( 42, 24,125,1);
-$rgba-primary-4: rgba( 27, 11, 98,1);
-
-$rgba-secondary-1-0: rgba( 32, 83,148,1); // Main Secondary color (1) */
-$rgba-secondary-1-1: rgba( 93,132,181,1);
-$rgba-secondary-1-2: rgba( 59,102,157,1);
-$rgba-secondary-1-3: rgba( 18, 62,118,1);
-$rgba-secondary-1-4: rgba( 7, 45, 93,1);
-
-$rgba-secondary-2-0: rgba(109, 28,151,1); // Main Secondary color (2) */
-$rgba-secondary-2-1: rgba(152, 91,183,1);
-$rgba-secondary-2-2: rgba(125, 56,160,1);
-$rgba-secondary-2-3: rgba( 85, 15,120,1);
-$rgba-secondary-2-4: rgba( 64, 4, 94,1);
-
-
+$color-headers: #e84c3d;
+$color-title: #4f9aef;
+$caption-foreground: #c9c9c9;
 $border-1: 2px solid rgba(0,0,0,0.3);
+$content-subtle-background: #ccc;
+$footer-background: #36424a;
 
 /*Mixin*/
 @mixin header {
@@ -64,20 +19,58 @@ $border-1: 2px solid rgba(0,0,0,0.3);
     font-family: 'Dosis',sans-serif;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
     @include body;
 }
-/*Header Styles*/
-header.uheader {
+
+.content-wrapper {
+    min-height: 100%;
+    margin-bottom: -200px;
+
+    &:after {
+        display: block;
+        content: "";
+    }
+}
+
+
+
+.content-wrapper:after, .footer {
+    height: 200px;
+}
+/*Home Background*/
+.homebg {
     position: absolute;
     z-index: 9;
-    width: 100%;
+    width: 70%;
+    left: 15%;
+    margin-left: -10px;
+    background: rgba(0, 0, 0,0.6);
+    border-bottom: 3px solid $color-title;
+    min-height: 80%;
 
+    .navbar-header {
+        width: 100%;
+    }
+
+    .navbar-brand {
+        float: none;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+}
+/*Header Styles*/
+header.uheader {
     nav {
         &.navbar-ugym {
-            background: rgba(0, 0, 0,0.6);
             margin-top: 2em;
             border-radius: 0;
         }
@@ -86,11 +79,10 @@ header.uheader {
             display: inline-table;
         }
 
-        .ugymlogo > img {
-            width: 80%;
-        }
+        .navbar-center {
+            float: none;
+            display: inline-block;
 
-        .navbar-right {
             li {
                 a {
                     color: rgb(255, 255, 255);
@@ -135,22 +127,14 @@ header.uheader {
 }
 
 .ugym-left-box {
-    position: absolute;
-    top: 0;
-    margin-top: 22%;
-    z-index: 9;
     display: inline-block;
     @include header;
-    color: #c9c9c9;
-    left: 0;
-    background: rgba(0,0,0,0.6);
-    border-top: $border-1;
-    border-right: $border-1;
-    border-bottom: $border-1;
 
     & > h1 {
-        color: #e3e3e3;
+        color: #efefef;
+        /*color: $color-headers;*/
         font-size: 4em;
+        text-transform: uppercase;
 
         span {
             span {
@@ -162,35 +146,228 @@ header.uheader {
         }
     }
 
-    & > h2 {
-        color: #c9c9c9;
+    h2 {
+        line-height: 1.5em;
         @include body;
+        color: $caption-foreground;
+
+        small {
+            color: darken($caption-foreground,10%);
+        }
     }
 }
 
-section{
-    .promotions{
-        background:#1d2120;
-        margin-left:0;
-        margin-right:0;
-        color:#e3e3e3;
+section {
+    .promotions {
+        background: #1d2120;
+        margin-left: 0;
+        margin-right: 0;
+        color: #e3e3e3;
 
-        .promotext{
-            padding:15px;
-            font-size:35px;
+        .promotext {
+            padding: 15px;
+            font-size: 35px;
         }
-        .promocontact{
-            i{
-                color:#89bdd3;
+
+        .promocontact {
+            i {
+                color: #89bdd3;
             }
-            font-size:40px;
-            vertical-align:middle;
-            margin-top:20px;
+
+            font-size: 40px;
+            vertical-align: middle;
+            margin-top: 20px;
+        }
+    }
+}
+
+.subtle-bg {
+    background: $content-subtle-background;
+}
+
+.tiles-container {
+    padding: 20px 15px;
+    font-family: 'Trebuchet MS', sans-serif;
+
+    h1 {
+        color: #505050;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .tiles {
+        display: inline-block;
+        vertical-align: top;
+        width: 31%;
+        float: left;
+        margin-right: 2%;
+        background: #fff;
+        padding: 10px;
+        -webkit-box-shadow: 0 8px 6px -6px black;
+        -moz-box-shadow: 0 8px 6px -6px black;
+        box-shadow: 0 8px 6px -6px black;
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        figcaption {
+            color: #505050;
+            font-size: 1.75em;
+            padding: 10px 0 5px;
+            display: block;
+        }
+
+        p {
+            font-size: 1em;
+            font-weight: 500;
+
+
+            .text {
+                margin-bottom: 20px;
+                font-size: 1.15em;
+                line-height: 1.25em;
+                color: #222;
+            }
+        }
+
+        @media (max-width:800px) {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+}
+
+
+.fitness-goals {
+    min-height: 180px;
+    background: url('../images/fitnessGoals.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fitnessGoals.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fitnessGoals.jpg', sizingMethod='scale')";
+
+    > div {
+        float: left;
+        width: 100%;
+    }
+}
+
+.location {
+    width: 100%;
+    padding: 0;
+    height: 300px;
+}
+
+.pad-top-20 {
+    padding-top: 20px;
+}
+
+.footer {
+    color: #e5e5e5;
+    background: $footer-background;
+    padding-top: 40px;
+    padding-bottom: 20px;
+
+    h4 {
+        font-weight: 500;
+        margin: 0 0 10px;
+        line-height: normal;
+        font-size: 1.5em;
+        @include header;
+        letter-spacing: 2px;
+
+        + p {
+            font-size:1.25em;
         }
     }
 
-    .whatwedo{
-        background:#020001;
-        margin:0;
+    ul {
+        margin: 0;
+        padding: 0 15px;
+        list-style: none;
+        font-size: 1em;
+
+        &.social-media {
+            padding: 0;
+
+            li {
+                float: left;
+                margin-right: 10px;
+                font-size: 1.5em;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        li {
+            padding: 0 0 20px;
+
+            a {
+                color: #efefef;
+                font-weight: 500;
+                font-size: 1.15em;
+                letter-spacing: 1.5px;
+
+                span {
+
+                    strong {
+                        font-weight: normal;
+                    }
+
+                    &.icon-container {
+                        background: darken($footer-background, 10%);
+                        padding: 0;
+                        border-radius: 50%;
+                        color: #efefef;
+                        text-align: center;
+                        height: 30px;
+                        width: 30px;
+                        display: block;
+                        float: left;
+                        margin-right: 10px;
+                        vertical-align: text-top;
+
+                        .fa {
+                            font-size: 1.25em;
+                            padding: 7px;
+
+                            &.fa-location-arrow {
+                                -ms-transform: rotate(-45deg);
+                                -webkit-transform: rotate(-45deg);
+                                transform: rotate(-45deg);
+                            }
+
+                            &.fa-envelope {
+                                font-size: 1em;
+                            }
+                        }
+                    }
+
+                    .icon-container + & {
+                        vertical-align: text-top;
+                        width: calc(100% - 30px);
+                        float: left;
+                    }
+                }
+
+                &:hover, &:focus {
+                    color: $color-title;
+
+                    .icon-container {
+                        background: lighten($footer-background, 5%);
+                    }
+                }
+            }
+        }
     }
+}
+
+.text-underline {
+    text-decoration: underline;
 }

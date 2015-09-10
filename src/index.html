@@ -11,90 +11,179 @@
     <link rel="stylesheet" href="assets/scripts/owl-carousel/owl.carousel.css" />
     <link rel="stylesheet" href="assets/scripts/owl-carousel/owl.theme.css" />
     <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css" />
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/sass/styles.css" />
 </head>
 <body>
+    <article class="content-wrapper">
+        <section class="homebg">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Header -->
+                    <header class="uheader">
+                        <nav class="navbar navbar-ugym">
+                            <div class="navbar-header text-center">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand ugymlogo" href="#">
+                                    <img src="assets/images/logogym.png" alt="Universal Gym" class="img-responsive" />
+                                </a>
+                            </div>
+                            <div id="navbar" class="navbar-collapse collapse text-center">
+                                <ul class="nav navbar-nav navbar-center">
+                                    <li class="active"><a href="./">Whatwedo<span class="sr-only">(current)</span></a></li>
+                                    <li><a href="#">Ourschedule</a></li>
+                                    <li><a href="#">Pricing</a></li>
+                                    <li><a href="#">Findus</a></li>
+                                </ul>
+                            </div><!--/.nav-collapse -->
+                        </nav>
+                    </header>
+                    <!-- Body Text -->
+                    <div class="container-fluid text-center">
+                        <div class="row ugym-left-box">
+                            <h1 class="textaction animated bounceInRight">Its time to go, <strong>GYM</strong></h1>
+                            <div class="col-xs-12 pad-top-20">
+                                <h2>
+                                    <q>
+                                        I hated every minute of training, but I said, Don't quit. Suffer now and live the rest of your life as a champion.
 
-    <header class="uheader">
-        <nav class="navbar navbar-ugym">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand ugymlogo" href="#">
-                        <img src="assets/images/logogym.png" alt="Universal Gym" class="img-responsive" />
-                    </a>
+                                    </q>
+                                    <small>-- Muhammad Ali</small>
+                                </h2>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="./">Whatwedo<span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">Ourschedule</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Findus</a></li>
-                    </ul>
-                </div><!--/.nav-collapse -->
-            </div><!--/.container-fluid -->
-        </nav>
-    </header>
-
-    <section>
-        <div class="row">
-            <div class="col-md-7 col-xs-12 ugym-left-box">
-                <h1 class="textaction">Its time to go, <strong>GYM</strong></h1>
-                <h2><q>A bear, however hard he tries, grows tubby without exercise.</q></h2>
-                <h4 class="pull-right">- A.A. Milne</h4>
+            </div>
+        </section>
+        <section>
+            <div id="homescreen" class="owl-carousel">
+                <div class="content bg3"></div>
+                <div class="content bg2"></div>
+                <div class="content bg1"></div>
+            </div>
+        </section>
+        <section>
+            <div class="row promotions">
+                <div class="container">
+                    <div class="col-md-6 text-right promotext">
+                        For new students, demo sessions are provided <strong>Free</strong>. Call us @
+                    </div>
+                    <div class="col-md-6 text-center promotext promocontact">
+                        <i class="fa fa-mobile"></i> &nbsp;&nbsp;&nbsp;+91-9849722768
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- What we do section -->
+        <section class="container-fluid subtle-bg">
+            <div class="row">
+                <div class="tiles-container container">
+                    <h1>What we do</h1>
+                    <div class="tiles">
+                        <figure>
+                            <img src="assets/images/wedomale.jpg" alt="Male" class="img-responsive" />
+                            <figcaption>
+                                Body Building
+                            </figcaption>
+                            <p class="text">
+                                Many engross making their looks in shape.To achieve, put your intensity and we do help in "Body Building"
+                            </p>
+                        </figure>
+                    </div>
+                    <div class="tiles">
+                        <figure>
+                            <img src="assets/images/weightlifting.jpg" alt="Male" class="img-responsive" />
+                            <figcaption>
+                                Power Lifting
+                            </figcaption>
+                            <p class="text">
+                                Looking for a guidance under specialized trainer to turn into a champion. We do help in "Weight and Power Lifting"
+                            </p>
+                        </figure>
+                    </div>
+                    <div class="tiles">
+                        <figure>
+                            <img src="assets/images/fitness.jpg" alt="Male" class="img-responsive" />
+                            <figcaption>
+                                Fitness Programs
+                            </figcaption>
+                            <p class="text">
+                                Retain strength, endurance and have healthy life with our "Physical Fitness" , "Weight Loss" & "Physiotherapy"  Programs
+                            </p>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container-fluid fitness-goals">
+            <div></div>
+        </section>
+        <section class="container-fluid location" id="location"></section>
+    </article>
+    <section class="footer container-fluid">
+        <div class="container">
+            <div class="row">
+                <ul class="col-sm-6 col-xs-12">
+                    <li>
+                        <a href="">
+                            <span class="icon-container"><i class="fa fa-location-arrow"></i></span>
+                            <span>
+                                <label class="sr-only">Address</label>
+                                DCMS Godowns, Chemmu Miyapet, ITI,<br />
+                                <strong>Kadapa - 516004</strong>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="icon-container"><i class="fa fa-phone"></i></span>
+                            <span><label class="sr-only">Phone Number</label><strong>+91-9849722768</strong></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="icon-container"><i class="fa fa-envelope"></i></span>
+                            <span class="text-underline"><label class="sr-only">Email ID</label><strong>info@universalgymcentre.com</strong></span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="col-sm-6 col-xs-12">
+                    <h4>About the Gym</h4>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                    </p>
+                    <div>
+                        <ul class="social-media">
+                            <li>
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <i class="fa fa-facebook-official "></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.twitter.com/" target="_blank">
+                                    <i class="fa fa-twitter-square"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
-    <section>
-        <div id="homescreen" class="owl-carousel">
-            <div class="content bg1"></div>
-            <div class="content bg2"></div>
-            <div class="content bg3"></div>
-        </div>
-    </section>
-
-    <section>
-        <div class="row promotions">
-            <div class="container">
-                <div class="col-md-6 text-right promotext">
-                    For new students, demo sessions are provided <strong>Free</strong>. Call us @
-                </div>
-                <div class="col-md-6 text-center promotext promocontact">
-                    <i class="fa fa-mobile"></i> &nbsp;&nbsp;&nbsp;+91-9849722768
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- What we do section -->
-    <!--<section>
-        <div class="row whatwedo">
-            <div class="container">
-                <div class="col-md-5">
-                    <img src="assets/images/wedomale.jpg" alt="Male" class="img-responsive" />
-                </div>
-                <div class="col-md-1">
-                    &nbsp;
-                </div>
-                <div class="col-md-5">
-                    <img src="assets/images/wedofemale.jpg" alt="Female" class="img-responsive" />
-                </div>
-            </div>
-        </div>
-    </section>-->
     <!--Script library references-->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="assets/scripts/owl-carousel/owl.carousel.min.js"></script>
-    <script src="../bower_components/letteringjs/jquery.lettering.js"></script>
-    <script src="../bower_components/textillate/jquery.textillate.js"></script>
+    <script src="assets/scripts/parallax.min.js"></script>
     <script>
         $('#homescreen').owlCarousel({
             items: 1,
@@ -110,20 +199,32 @@
             responsiveRefreshRate: 200,
             responsiveBaseWidth: window,
             pagination: false,
-            autoHeight: false
+            autoHeight: false,
+            touchDrag: false,
+            mouseDrag: false
         });
 
-        $('.textaction').textillate({
-            autoStart: true,
-            inEffects: [],
-            in: {
-                effect: 'fadeInDownBig',
-                delayScale: 1.5,
-                delay: 100,
-                sequence: true
-            },
-            type: 'word'
-        });
+
+        (function () {
+            function init_map() {
+                var var_location = new google.maps.LatLng(14.462111, 78.815659);
+
+                var var_mapoptions = {
+                    center: var_location,
+                    zoom: 14
+                };
+                var var_marker = new google.maps.Marker({
+                    position: var_location,
+                    map: var_map,
+                    title: "Universal Gym"
+                });
+                var var_map = new google.maps.Map(document.getElementById("location"),
+                    var_mapoptions);
+                var_marker.setMap(var_map);
+            }
+            google.maps.event.addDomListener(window, 'load', init_map);
+        })();
     </script>
+
 </body>
 </html>
