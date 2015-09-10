@@ -36,10 +36,10 @@
                             </div>
                             <div id="navbar" class="navbar-collapse collapse text-center">
                                 <ul class="nav navbar-nav navbar-center">
-                                    <li class="active"><a href="./">Whatwedo<span class="sr-only">(current)</span></a></li>
+                                    <li class="active"><a href="#whatwedo">Whatwedo<span class="sr-only">(current)</span></a></li>
                                     <li><a href="#">Ourschedule</a></li>
-                                    <li><a href="#">Pricing</a></li>
-                                    <li><a href="#">Findus</a></li>
+                                    <li><a href="#">Trainer</a></li>
+                                    <li><a href="#location">Findus</a></li>
                                 </ul>
                             </div><!--/.nav-collapse -->
                         </nav>
@@ -83,7 +83,7 @@
             </div>
         </section>
         <!-- What we do section -->
-        <section class="container-fluid subtle-bg">
+        <section id="whatwedo" class="container-fluid subtle-bg">
             <div class="row">
                 <div class="tiles-container container">
                     <h1>What we do</h1>
@@ -94,7 +94,7 @@
                                 Body Building
                             </figcaption>
                             <p class="text">
-                                Many engross making their looks in shape.To achieve, put your intensity and we do help in "Body Building"
+                                Many engross making their body in shape.To achieve, put your intensity and we help in "Body Building"
                             </p>
                         </figure>
                     </div>
@@ -127,6 +127,85 @@
             <div></div>
         </section>
         <section class="container-fluid location" id="location"></section>
+        <section class="container-fluid schedule">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1>Our Schedule</h1>
+                    <h5>Timings: Morning 5:00 AM to 8:00 AM and Evening 5:30 PM to 7:30 PM (Closes on every sunday evening)</h5>
+                    <h5>* Below displaying is a generalized schedule for body building and it may depends on criteria and time period</h5>
+                </div>
+            </div>
+
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>Monday</th>
+                        <th>Tuesady</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                        <th>Sunday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </article>
     <section class="footer container-fluid">
         <div class="container">
@@ -138,7 +217,7 @@
                             <span>
                                 <label class="sr-only">Address</label>
                                 DCMS Godowns, Chemmu Miyapet, ITI,<br />
-                                <strong>Kadapa - 516004</strong>
+                                <strong>Kadapa - 516004, Andhra Pradesh, India</strong>
                             </span>
                         </a>
                     </li>
@@ -158,21 +237,20 @@
                 <div class="col-sm-6 col-xs-12">
                     <h4>About the Gym</h4>
                     <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        Our gym is a registered institution running since 1998, trained many people in the areas of body building, weight lifting, Power lifting and fitness.We are based and running in Kadapa, Andhra Pradesh. Our zeal is keep you healthy and fit.
                     </p>
                     <div>
                         <ul class="social-media">
                             <li>
-                                <a href="https://www.facebook.com/" target="_blank">
+                                <a href="https://www.facebook.com/universalgymcentre" target="_blank">
                                     <i class="fa fa-facebook-official "></i>
                                 </a>
                             </li>
-                            <li>
+                            <!--<li>
                                 <a href="https://www.twitter.com/" target="_blank">
                                     <i class="fa fa-twitter-square"></i>
                                 </a>
-                            </li>
+                            </li>-->
                         </ul>
                     </div>
                 </div>
@@ -224,6 +302,21 @@
             }
             google.maps.event.addDomListener(window, 'load', init_map);
         })();
+
+        $(function () {
+            $('a[href*=#]:not([href=#])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
     </script>
 
 </body>
