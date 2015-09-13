@@ -281,7 +281,7 @@ section {
         letter-spacing: 2px;
 
         + p {
-            font-size:1.25em;
+            font-size: 1.25em;
         }
     }
 
@@ -371,6 +371,50 @@ section {
 .text-underline {
     text-decoration: underline;
 }
-.schedule{
 
+.schedule {
+}
+
+.parallax-window {
+    min-height: 500px;
+    background: transparent;
+}
+
+.schedule {
+    color: #dbd8d8;
+}
+
+.table > thead > tr > th {
+    border-bottom: 1px solid #808080;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    border-bottom: 1px solid #808080;
+}
+
+.trainer {
+    margin-bottom: 40px;
+}
+
+.trainer img {
+    width: 55%;
+    height: 225px;
+    display: inline-block;
+}
+
+@media screen and (max-width:320px) and (max-width:480px) {
+    #homescreen .content {
+        height: 50vh !important;
+    }
+
+    .navbar-toggle {
+        color: #fff;
+    }
+
+    .homebg {
+        min-height: 0;
+    }
+    .footer{
+        min-height:100%;
+    }
 }
